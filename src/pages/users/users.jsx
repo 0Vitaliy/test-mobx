@@ -23,11 +23,11 @@ export const Users = observer(() =>{
   
   return <div className='wrap'>
     <div className='users'>
-      {users.map((user)=>{
+      {users.length?users.map((user)=>{
         return <UserItem {...user} />
-      })}
+      }):'Loading...'}
     </div>
-    <button onClick={()=>setOpen(true)}>Add User</button>
+    <button onClick={()=>setOpen(true)} style={{whiteSpace: 'pre', cursor: 'pointer'}}>Add User</button>
     <CreateUserModal isOpen={open} onClose={()=>setOpen(false)}/>
   </div>
 })
