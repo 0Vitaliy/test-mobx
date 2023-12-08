@@ -1,0 +1,10 @@
+.wrap{
+  padding: 40px;
+}
+
+.users{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
